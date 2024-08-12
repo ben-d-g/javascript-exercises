@@ -1,4 +1,5 @@
 const sumAll = function(...args) {
+    //validate input
     for (const item of args){
         if (!(Number.isInteger(item))){
             return "ERROR";
@@ -7,6 +8,8 @@ const sumAll = function(...args) {
             return "ERROR";
         }
     }
+
+    //calculate answer
     let answer = 0;
     for (let i = Math.min(...args); i <= Math.max(...args); i++){
         answer += i;
